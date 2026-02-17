@@ -33,6 +33,7 @@ jobs:
           playwright install --with-deps
       - name: 🚀 Start Web Server
         run: |
+          cd cubeit
           python -m http.server 8000 &
           sleep 5
 
