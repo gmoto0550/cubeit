@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cube Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cube Calculator</h2>
+
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <br>
+    <button onclick="calculateCube()">Calculate Cube</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateCube() {
+            var input = document.getElementById("numberInput").value;
+            var resultDiv = document.getElementById("result");
+
+            if (input === "") {
+                resultDiv.innerHTML = "Enter a number";
+                return;
+            }
+
+            var number = Number(input);
+            var cube = number * number * number;
+
+            resultDiv.innerHTML = "Cube of " + number + " is " + cube;
+        }
+    </script>
+
+</body>
+</html>
